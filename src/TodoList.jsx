@@ -14,6 +14,10 @@ export default function TodoList() {
     setTasks((tasks) => [...tasks, newTask]);
     setText("");
   }
+
+  function deleteTask(id) {
+    setTasks(tasks.filter((task) => task.id !== id));
+  }
   return (
     <>
       <h1>TODO LIST</h1>
@@ -34,7 +38,7 @@ export default function TodoList() {
         </button>
       </div>
       {tasks.map((task) => (
-        <TodoItem key={task.id} task={task} />
+        <TodoItem key={task.id} task={task} onDeleteTask={deleteTask} />
       ))}
     </>
   );
