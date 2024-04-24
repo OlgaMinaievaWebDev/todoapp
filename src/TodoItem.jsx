@@ -1,14 +1,12 @@
-export default function TodoItem() {
+export default function TodoItem({ task }) {
+  console.log(task);
   return (
     <div className="todo--item">
       <input type="checkbox" />
-      <div>
-        <h3>Create a project</h3>
-        <p>5:23 NOv 24</p>
-      </div>
+      <h3>{task.text}</h3>
       <div className="todo--icons">
-        <i class="fa-solid fa-trash-can"></i>
-        <i class="fa-solid fa-pen"></i>
+        <i className="fa-solid fa-trash-can"></i>
+        <i className="fa-solid fa-pen"></i>
       </div>
     </div>
   );
