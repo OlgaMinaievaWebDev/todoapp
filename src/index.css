@@ -1,5 +1,10 @@
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -12,16 +17,27 @@ code {
     monospace;
 }
 
+.App {
+  width: 800px;
+  max-width: 450px;
+  padding: 1rem;
+  background-color: #f8f9ff;
+  color: #676583;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .todo--item {
   display: flex;
   padding: 1rem;
-  gap: 20px;
+  gap: 1rem;
   justify-content: start;
   align-items: center;
 }
 
 .todo--item p {
-  margin-top: 2px;
   color: #888;
   text-decoration: line-through;
 }
@@ -31,4 +47,27 @@ code {
   display: flex;
   gap: 10px;
   margin-left: auto;
+  color: #5a5a5a;
+}
+
+.todo--input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo--input input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: #6270ef;
+  color: #e2e6ff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
 }
