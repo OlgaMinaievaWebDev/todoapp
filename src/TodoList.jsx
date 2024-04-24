@@ -5,9 +5,7 @@ export default function TodoList() {
   const [tasks, setTasks] = useState("");
   return (
     <>
-      <ul>
-        <TodoItem />
-      </ul>
+      <TodoItem />
     </>
   );
 }
