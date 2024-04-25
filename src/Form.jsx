@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({ onAddTasks }) {
   const [text, setText] = useState("");
 
   function handleSubmit(e) {
@@ -12,6 +12,7 @@ export default function Form() {
       id: Date.now(),
     };
     console.log(newTask);
+    onAddTasks(newTask);
     setText("");
   }
 
