@@ -36,9 +36,8 @@ h1 {
   align-items: center;
 }
 
-.todo--item p {
+.todo--item h3 {
   color: #888;
-  text-decoration: line-through;
 }
 
 .todo--icons {
