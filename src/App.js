@@ -13,18 +13,6 @@ export default function App() {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   }
 
-  // function deleteTask(id) {
-  //   setTasks(tasks.filter((task) => task.id !== id));
-  // }
-
-  // function handleToggleItem(id) {
-  //   setTasks((tasks) =>
-  //     tasks.map((task) =>
-  //       task.id === id ? { ...task, isComplete: !task.isComplete } : task
-  //     )
-  //   );
-  // }}
-  // const [text, setText] = useState("");
   return (
     <div className="App">
       <Form onAddTasks={handleAddTask} />
