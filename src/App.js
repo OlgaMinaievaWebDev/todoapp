@@ -1,8 +1,7 @@
+import Form from "./Form";
 import TodoList from "./TodoList";
-export default function App() {
-  // const [tasks, setTasks] = useState([]);
-  // const [text, setText] = useState("");
 
+export default function App() {
   // function addTask(text) {
   //   const newTask = {
   //     text,
@@ -24,9 +23,10 @@ export default function App() {
   //     )
   //   );
   // }}
-
+  // const [text, setText] = useState("");
   return (
     <div className="App">
+      <Form />
       <TodoList />
     </div>
   );
