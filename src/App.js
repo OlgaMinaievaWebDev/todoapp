@@ -13,10 +13,22 @@ export default function App() {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   }
 
+  function handleToggleTask(id) {
+    setTasks((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, complete: !task.complete } : task
+      )
+    );
+  }
+
   return (
     <div className="App">
       <Form onAddTasks={handleAddTask} />
-      <TodoList tasks={tasks} onDeleteTask={handleDeleteTask} />
+      <TodoList
+        tasks={tasks}
+        onDeleteTask={handleDeleteTask}
+        onToggleTask={handleToggleTask}
+      />
     </div>
   );
 }

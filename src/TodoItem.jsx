@@ -1,8 +1,14 @@
-export default function TodoItem({ task, onDeleteTask }) {
+export default function TodoItem({ task, onDeleteTask, onToggleTask }) {
   return (
     <div className="todo--item">
-      <input type="checkbox" value={task.complete} />
-      <h3>{task.text}</h3>
+      <input
+        type="checkbox"
+        value={task.complete}
+        onChange={() => onToggleTask(task.id)}
+      />
+      <h3 style={task.complete ? { textDecoration: "line-through" } : {}}>
+        {task.text}
+      </h3>
       <div className="todo--icons">
         <i
           className="fa-solid fa-trash-can"
