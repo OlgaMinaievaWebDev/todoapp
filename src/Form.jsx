@@ -18,11 +18,6 @@ export default function Form({ onAddTasks }) {
 
   return (
     <form className="todo--input" onSubmit={handleSubmit}>
-      <select className="btn">
-        <option value="all">All Tasks</option>
-        <option value="done">Complete</option>
-        <option value="notDone">In progress</option>
-      </select>
       <input
         type="text"
         placeholder="Set Task"

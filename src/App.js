@@ -21,6 +21,10 @@ export default function App() {
     );
   }
 
+  function handleClearList() {
+    setTasks([]);
+  }
+
   return (
     <div className="App">
       <Form onAddTasks={handleAddTask} />
@@ -28,6 +32,7 @@ export default function App() {
         tasks={tasks}
         onDeleteTask={handleDeleteTask}
         onToggleTask={handleToggleTask}
+        onClearList={handleClearList}
       />
     </div>
   );
