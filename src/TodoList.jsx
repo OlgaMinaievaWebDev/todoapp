@@ -29,7 +29,11 @@ export default function TodoList({
         />
       ))}
       <div className="actions">
-        <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+        <select
+          className="btn"
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+        >
           <option value="all">All Tasks</option>
           <option value="done">Complete</option>
           <option value="alphabet">In order</option>

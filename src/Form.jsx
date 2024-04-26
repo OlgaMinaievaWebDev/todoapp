@@ -17,14 +17,17 @@ export default function Form({ onAddTasks }) {
   }
 
   return (
-    <form className="todo--input" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Set Task"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <button className="btn">Add Task</button>
-    </form>
+    <>
+      <h1>TODO LIST</h1>
+      <form className="todo--input" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Set Task"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <button className="btn">Add Task</button>
+      </form>
+    </>
   );
 }

@@ -71,3 +71,8 @@ h1 {
   outline: none;
   max-width: 120px;
 }
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
